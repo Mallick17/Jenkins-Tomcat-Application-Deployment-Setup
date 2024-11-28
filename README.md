@@ -35,12 +35,12 @@ sudo yum install fontconfig java-17-openjdk
 sudo yum install jenkins
 sudo systemctl daemon-reload
 ```
-- Enable and Start Jenkins
+- Enable and Start Jenkins<br>
   Enable Jenkins to start on boot, and start the Jenkins service immediately.
   ```bash
   systemctl enable jenkins
   systemctl start jenkins
   ```
-- Verify Jenkins Installation
+- Verify Jenkins Installation<br>
   Jenkins typically runs on port 8080. Ensure it is accessible by checking the connection at http://<your-server-ip>:8080.
 
