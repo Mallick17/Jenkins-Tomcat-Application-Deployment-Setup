@@ -17,14 +17,14 @@ First, install Java 17, which is required for running Jenkins and Maven.
 yum install java-17* -y
 ```
 
-### Installing Git
+### 2. Installing Git
 Next, install Git, which will be used for fetching the source code repositories.
 ```bash
 yum install git -y
 ```
 
-### Installing Jenkins
-To install Jenkins on a Red Hat-based system, prefer jenkins installation guide for Red Hat [Jenkins Installation page](https://www.jenkins.io/doc/book/installing/linux/#long-term-support-release-3)
+### 3. Installing Jenkins
+- To install Jenkins on a Red Hat-based system, prefer jenkins installation guide for Red Hat [Jenkins Installation page](https://www.jenkins.io/doc/book/installing/linux/#long-term-support-release-3)
 ```bash
 sudo wget -O /etc/yum.repos.d/jenkins.repo \
     https://pkg.jenkins.io/redhat-stable/jenkins.repo
@@ -35,3 +35,12 @@ sudo yum install fontconfig java-17-openjdk
 sudo yum install jenkins
 sudo systemctl daemon-reload
 ```
+- Enable and Start Jenkins
+  Enable Jenkins to start on boot, and start the Jenkins service immediately.
+  ```bash
+  systemctl enable jenkins
+  systemctl start jenkins
+  ```
+- Verify Jenkins Installation
+  Jenkins typically runs on port 8080. Ensure it is accessible by checking the connection at http://<your-server-ip>:8080.
+
