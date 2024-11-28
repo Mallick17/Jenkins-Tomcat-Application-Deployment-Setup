@@ -42,5 +42,15 @@ sudo systemctl daemon-reload
   systemctl start jenkins
   ```
 - Verify Jenkins Installation<br>
-  Jenkins typically runs on port 8080. Ensure it is accessible by checking the connection at http://<your-server-ip>:8080.
+  Jenkins typically runs on port 8080. Ensure it is accessible by checking the connection at `http://<your-server-ip>:8080`.
+- Retrieve Jenkins Admin Password<br>
+  The initial admin password for Jenkins is stored in the following location. Retrieve it using the command below:
+  ```bash
+  sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+  ```
+### 4. Install Maven Plugin in Jenkins
+To build Java projects with Maven, you must install the Maven plugin in Jenkins.
+- Log in to Jenkins.
+- Navigate to **Manage Jenkins** → **Tools** → **Maven Installation**.
+- Click **Add Maven**, provide a name (e.g., `Name_Maven`), and **save**.
 
